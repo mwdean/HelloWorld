@@ -14,9 +14,21 @@
 
 @implementation ViewController
 
+@synthesize myLabel;
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    //int startPosition = 0;
+    NSString *headerText = @"Hello My People";
+    
+    myLabel.text = headerText;
+}
+- (IBAction)touchUpInside:(id)sender forEvent:(UIEvent *)event {
+    
+    
+    myLabel.text = @"buttonEvent";
+    myLabel.alpha = 0xCCCCCC;
 }
 
 - (void)didReceiveMemoryWarning {
